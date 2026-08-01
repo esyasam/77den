@@ -34,7 +34,7 @@
             z-index: 1000; 
         }
         
-        /* LOGO AYARLARI BURADA GÜNCELLENDİ */
+        /* LOGO AYARLARI */
         .logo { 
             display: flex;
             align-items: center;
@@ -42,7 +42,7 @@
         }
         
         .logo img {
-            height: 150px; /* Logonun büyüklüğünü buradan ayarlayabilirsiniz */
+            height: 150px; /* Büyütülmüş Logo Boyutu */
             width: auto;
             object-fit: contain;
         }
@@ -66,8 +66,9 @@
         
         /* Hero Section */
         .hero { 
-            margin-top: 70px; 
-            height: 90vh; 
+            margin-top: 180px; /* Büyüyen menü için artırılan üst boşluk */
+            height: calc(100vh - 180px); /* Ekranı tam kaplaması için dinamik hesaplama */
+            min-height: 500px;
             background: linear-gradient(to right, rgba(44,62,80,0.9), rgba(44,62,80,0.7)), url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover; 
             display: flex; 
             flex-direction: column; 
@@ -213,7 +214,8 @@
             } 
             .hero { 
                 height: auto; 
-                padding: 120px 20px 80px; 
+                padding: 80px 20px 80px; 
+                margin-top: 240px; /* Mobilde alta geçen menü için ekstra boşluk */
             } 
         }
     </style>
@@ -221,7 +223,6 @@
 <body>
 
     <header>
-        <!-- LOGO KISMI BURADA DEĞİŞTİRİLDİ -->
         <a href="#" class="logo">
             <img src="77den_logo.png" alt="77den Logo">
         </a>
