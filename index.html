@@ -23,7 +23,7 @@
         /* Header & Nav */
         header { 
             background: #fff; 
-            padding: 20px 50px; 
+            padding: 15px 50px; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
@@ -34,16 +34,17 @@
             z-index: 1000; 
         }
         
+        /* LOGO AYARLARI BURADA GÜNCELLENDİ */
         .logo { 
-            font-size: 28px; 
-            font-weight: 900; 
-            color: #2c3e50; 
+            display: flex;
+            align-items: center;
             text-decoration: none; 
-            letter-spacing: -1px; 
         }
         
-        .logo span { 
-            color: #e67e22; 
+        .logo img {
+            height: 60px; /* Logonun büyüklüğünü buradan ayarlayabilirsiniz */
+            width: auto;
+            object-fit: contain;
         }
         
         nav ul { 
@@ -220,7 +221,10 @@
 <body>
 
     <header>
-        <a href="#" class="logo">77<span>den</span></a>
+        <!-- LOGO KISMI BURADA DEĞİŞTİRİLDİ -->
+        <a href="#" class="logo">
+            <img src="77den_logo.png" alt="77den Logo">
+        </a>
         <nav>
             <ul>
                 <li><a href="#hero">Anasayfa</a></li>
@@ -272,4 +276,3 @@
 
 </body>
 </html>
-
